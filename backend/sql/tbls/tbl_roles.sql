@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS tbl_roles (
+    role_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    role_name VARCHAR(255) NOT NULL,
+    role_key VARCHAR(255) UNIQUE NOT NULL,
+    is_active TINYINT DEFAULT 1,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_by INT NOT NULL,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_by INT NOT NULL
+);
